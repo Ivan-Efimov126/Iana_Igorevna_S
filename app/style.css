@@ -68,6 +68,8 @@ img {
 menu {
   list-style: none;
   display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
 }
 menu li {
   margin: 0 1rem 0 0;
@@ -97,8 +99,12 @@ button {
   margin-bottom: 2rem;
 }
 button.btn {
+  padding: 2rem;
   border-radius: 15rem;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+button:hover {
+  font-weight: bold;
 }
 
 /* классы вне контекста */
@@ -109,6 +115,7 @@ header {
   background-color: transparent;
   background-image: url("./image/7cb254.jpg");
   background-repeat: no-repeat;
+  background-position-x: right;
   background-position-y: 10rem;
   background-size: cover;
 }
@@ -118,6 +125,7 @@ header .area-10 {
 }
 header .area-11 {
   display: flex;
+  flex-grow: 1;
   text-align: center;
 }
 header .area-11 > div {
@@ -141,7 +149,7 @@ header .area-20 {
 header .area-21 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 main > section {
@@ -153,8 +161,8 @@ main > section {
   background-color: #E8D2CA;
   background-size: cover;
 }
-.s01 img {
-  margin-bottom: 2rem;
+.s01 .area-11 {
+  padding: 3rem;
 }
 .s01 p {
   margin-bottom: 2rem;
@@ -225,9 +233,13 @@ main > section {
   background-color: transparent;
   background: linear-gradient(to left, transparent, #E8D2CA), url("image/fon-04.jpg");
   background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 0rem;
   background-size: cover;
 }
 .s04 form {
+  max-width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -250,6 +262,7 @@ footer .area-10 {
 footer .area-11 {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 footer .area-12 {
   display: flex;
@@ -274,12 +287,12 @@ footer .fontawesome li {
   }
 }
 @media (max-width: 575px) {
-  .s04 h2 {
-    text-align: center;
-  }
-
-  .s04 .area-21 {
+  header .area-10 {
     display: flex;
     justify-content: center;
+  }
+
+  .s04 h2 {
+    text-align: center;
   }
 }
